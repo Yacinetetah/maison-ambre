@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Ambre — Parfumerie</title>
+  <meta name="description" content="Maison Ambre : parfums d'exception pour elle, pour lui et mixtes. Livraison offerte dès 80 €.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">Livraison offerte dès 80 € · Échantillons offerts avec chaque commande</div>
+
+  <header class="header">
+    <a href="#" class="logo">Maison <span>Ambre</span></a>
+    <nav class="nav" id="nav">
+      <a href="#boutique">Boutique</a>
+      <a href="#collections">Collections</a>
+      <a href="#apropos">Notre maison</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="openCart" aria-label="Ouvrir le panier">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Nouvelle collection · Automne 2026</p>
+      <h1>L'art de laisser<br><em>une trace.</em></h1>
+      <p class="lead">Des fragrances composées à Grasse, avec des matières premières rares, pour sublimer chaque instant.</p>
+      <div class="hero-cta">
+        <a href="#boutique" class="btn btn-dark">Découvrir la boutique</a>
+        <a href="#collections" class="btn btn-ghost">Nos collections</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="bottle big" style="--c1:#e9b872;--c2:#a8642a"><div class="cap"></div><div class="glass"><span>AMBRE<br>N°1</span></div></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div><strong>100 % authentiques</strong><span>Directement de nos ateliers</span></div>
+    <div><strong>Livraison 48 h</strong><span>Offerte dès 80 €</span></div>
+    <div><strong>Retours 30 jours</strong><span>Satisfait ou remboursé</span></div>
+    <div><strong>Paiement sécurisé</strong><span>CB, PayPal, Apple Pay</span></div>
+  </section>
+
+  <section class="collections" id="collections">
+    <h2 class="section-title">Nos collections</h2>
+    <div class="collection-grid">
+      <button class="collection" data-filter="femme" style="--bg:linear-gradient(135deg,#f6d7d3,#d98f8b)"><span>Pour elle</span></button>
+      <button class="collection" data-filter="homme" style="--bg:linear-gradient(135deg,#c9d3dc,#4c5f72)"><span>Pour lui</span></button>
+      <button class="collection" data-filter="mixte" style="--bg:linear-gradient(135deg,#f1e2c6,#b8874a)"><span>Mixte</span></button>
+    </div>
+  </section>
+
+  <section class="shop" id="boutique">
+    <h2 class="section-title">La boutique</h2>
+    <div class="toolbar">
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="tous">Tous</button>
+        <button class="chip" data-filter="femme">Femme</button>
+        <button class="chip" data-filter="homme">Homme</button>
+        <button class="chip" data-filter="mixte">Mixte</button>
+      </div>
+      <div class="toolbar-right">
+        <input type="search" id="search" placeholder="Rechercher un parfum…" aria-label="Rechercher">
+        <select id="sort" aria-label="Trier">
+          <option value="pop">Popularité</option>
+          <option value="asc">Prix croissant</option>
+          <option value="desc">Prix décroissant</option>
+          <option value="name">Nom A–Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Aucun parfum ne correspond à votre recherche.</p>
+  </section>
+
+  <section class="about" id="apropos">
+    <div class="about-text">
+      <h2 class="section-title left">Notre maison</h2>
+      <p>Fondée par des passionnés de parfumerie, Maison Ambre réunit des nez indépendants autour d'une même exigence : créer des sillages élégants, durables et sincères.</p>
+      <p>Chaque flacon est rempli à la main, avec des concentrations généreuses (Eau de Parfum à 18–22 %) pour une tenue de 8 à 12 heures.</p>
+    </div>
+    <div class="about-stats">
+      <div><b>12</b><span>fragrances signatures</span></div>
+      <div><b>4,9/5</b><span>note moyenne clients</span></div>
+      <div><b>25 000</b><span>flacons expédiés</span></div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="contact">
+    <h2>Rejoignez le cercle Ambre</h2>
+    <p>−10 % sur votre première commande et accès en avant-première aux nouveautés.</p>
+    <form id="newsletter">
+      <input type="email" required placeholder="Votre adresse e-mail" aria-label="E-mail">
+      <button class="btn btn-dark" type="submit">S'inscrire</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="#" class="logo">Maison <span>Ambre</span></a>
+      <p>Parfumerie de création · Grasse, France</p>
+    </div>
+    <div class="footer-links">
+      <a href="#boutique">Boutique</a>
+      <a href="#apropos">Notre maison</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="copy">© <span id="year"></span> Maison Ambre. Site de démonstration.</p>
+  </footer>
+
+  <!-- Panier -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier">
+    <div class="drawer-head">
+      <h3>Votre panier</h3>
+      <button class="close" id="closeCart" aria-label="Fermer">×</button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="line"><span>Sous-total</span><span id="subtotal">0,00 €</span></div>
+      <div class="line"><span>Livraison</span><span id="shipping">—</span></div>
+      <div class="line total"><span>Total</span><span id="total">0,00 €</span></div>
+      <button class="btn btn-dark full" id="checkout">Passer commande</button>
+    </div>
+  </aside>
+
+  <!-- Fiche produit -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Fermer">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
